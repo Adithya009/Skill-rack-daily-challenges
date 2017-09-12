@@ -1,11 +1,16 @@
 def bsort(c):
-  for j in range(len(c)):
+  for j in range(len(c)-1):
     for i in range(len(c)-1):
+      if c[i][1]!=c[i+1][1]:    
         if c[i][1]<c[i+1][1]:
             t=c[i]
             c[i]=c[i+1]
             c[i+1]=t 
-    
+      else:
+        if c[i][0]>c[i+1][0]:
+            t=c[i]
+            c[i]=c[i+1]
+            c[i+1]=t
     
 s=raw_input().strip()
 c=[]
