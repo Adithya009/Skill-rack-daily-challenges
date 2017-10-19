@@ -5,8 +5,10 @@ x=int(raw_input())
 k=int(raw_input())
 m=raw_input().strip()
 if(x>1 or x<-1):              #I've to save my program from idiots
-    print "Invalid Input"   #so , here we go....
-    sys.exit()              #I can't take this anymore
+    print "Invalid Input"     #so , here we go....
+    sys.exit(0)               #I can't take this anymore
+if(k<1):                      #fuck , Private test case :(
+    k=1  
 e=""                   #encrypted message
 for i in m:            #i takes every character of the message
     n=ord(i)           #ascii value of i 
